@@ -26,7 +26,7 @@ services:
         condition: service_healthy
   fast-api-package:
     build: ./fast-api-app
-    entrypoint: [ "uvicorn", "package_controller:app", "--host", "0.0.0.0", "--port", "81" ]
+    entrypoint: [ "uvicorn", "delivery_monitoring_controller:app", "--host", "0.0.0.0", "--port", "81" ]
     ports:
       - "81:81"
     depends_on:
